@@ -138,15 +138,15 @@ print(avg(4,2,6))
 
 print("---")
 
-var d = 0
-while d < 10{
-    d++
-}
+//var d = 0
+//while d < 10{
+//    d++
+//}
 
-var e = 0
-repeat{
-    e++
-} while c < 10
+//var e = 0
+//repeat{
+//    e++
+//} while c < 10
 
 print("---")
 
@@ -201,9 +201,32 @@ sekil.yazdir()
 sekil.setName("Oval")
 print(sekil.getName())
 
+print("---")
 
+//Ödev
+var rnd = rand()%10+1;
+print(rnd)
 
+func generateRnd() -> Double{
+    let random = Double(arc4random())/Double(UInt32.max)
+    return random
+}
 
+var sayac = 0
+
+for i in 1..<6{
+
+    var x = generateRnd()
+    var y = generateRnd()
+    
+    if(x*x + y*y < 1){
+        sayac++
+    }
+    
+    print(x, y)
+}
+
+print(sayac/5)
 
 
 
