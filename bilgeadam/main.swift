@@ -123,6 +123,7 @@ print(hesapla(100, kdv_oran: 0.18)) //fonk. çalıştırırken değişken adı :
 
 print("---")
 
+//Fonksiyona yazılan parametrelerin ortalamasını bulan fonksiyon
 func avg (nums: Int...) -> Int{
     var topla = 0
     
@@ -133,13 +134,21 @@ func avg (nums: Int...) -> Int{
     return topla / nums.count
 }
 
-var sonuc = avg(4, 2)
-print(sonuc)
+print(avg(4,2,6))
 
+print("---")
 
+var d = 0
+while d < 10{
+    print(d)
+    d++
+}
 
-
-
+var e = 0
+repeat{
+    print(e)
+    e++
+} while c < 10
 
 
 
