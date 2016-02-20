@@ -175,7 +175,7 @@ class NamedShape{
     //Birden fazla const. olursa const.'ı overload etmiş oluyoruz.
     
     //getter setter şart değil. 
-    //Access identifier yok.
+    //Access identifier kullanılabilir.
     func getName() -> String{
         return self.name
     }
