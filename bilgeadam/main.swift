@@ -140,19 +140,66 @@ print("---")
 
 var d = 0
 while d < 10{
-    print(d)
     d++
 }
 
 var e = 0
 repeat{
-    print(e)
     e++
 } while c < 10
 
+print("---")
 
+class Shape{
+    var numOfSides = 0
+    func about() -> String {
+        return "\(numOfSides) tane kenarlı şekil."
+    }
+}
 
+var shape = Shape() //Instance yarattık
+shape.numOfSides = 7
 
+var shapeAbout = shape.about()
+print(shapeAbout)
+
+print("---")
+
+class NamedShape{
+    var numOfSides: Int = 0
+    var name: String
+    
+    init(name: String){  //init -> constructor
+        self.name = name
+    }
+    //Birden fazla const. olursa const.'ı overload etmiş oluyoruz.
+    
+    //getter setter şart değil. 
+    //Access identifier yok.
+    func getName() -> String{
+        return self.name
+    }
+    func setName(name: String){
+        self.name = name
+    }
+    
+    func about() -> String{
+        return "\(numOfSides) tane kenarı olan şekil"
+    }
+    
+    func yazdir(){
+        print(self.about())
+    }
+}
+
+var sekil = NamedShape(name: "Kare")
+sekil.numOfSides = 4
+
+print(sekil.about())
+sekil.yazdir()
+
+sekil.setName("Oval")
+print(sekil.getName())
 
 
 
